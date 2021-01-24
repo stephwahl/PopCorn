@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieApiService } from '../movie-api.service';
+import { MovieAPIService } from '../movie-api.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,10 +8,10 @@ import { MovieApiService } from '../movie-api.service';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor(public movieAPI:MovieApiService) { }
+  constructor(public movieAPI:MovieAPIService) { }
 
   ngOnInit(): void {
-    this.movieAPI.getMovies();
+//   this.movieAPI.getMovies();
   }
 
 }

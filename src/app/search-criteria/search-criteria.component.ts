@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MovieAPIService } from '../movie-api.service';
 
 @Component({
   selector: 'app-search-criteria',
@@ -6,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
-@Input() post: any
-  constructor() { }
+  constructor(public movieApi: MovieAPIService) { }
 
   ngOnInit(): void {
+    console.log("Hi there");
+    this.movieApi.getTopFive();
   }
 
 }
