@@ -1,3 +1,28 @@
-<p>search-criteria works!</p>
-
-<div *ngFor="let movie of movieApi.movies">{{movie.title}}</div>
+<form>
+    <select name="genres" id="genres">
+    <option value="" disabled selected hidden>Select Genre</option>
+    <option value="28">Action</option>
+    <option value="35">Comedy</option>
+    <option value="18">Drama</option>
+    <option value="14">Fantasy</option>
+    <option value="27">Horror</option>
+    <option value="9648">Mystery</option>
+    <option value="10749">Romance</option>
+</select>
+<input type="text" placeholder="Input Year">
+    <select name="rating" id="rating">
+    <option value="" disabled selected hidden>Select Rating</option>
+    <option value="G">G</option>
+    <option value="PG">PG</option>
+    <option value="PG13">PG-13</option>
+    <option value="R">R</option>
+</select>
+<input type="submit" value="Search">
+</form>
+<h1>Spotlight Movies</h1>
+<div *ngFor="let movie of movieApi.movies">
+<img src={{movie.poster_path}}>
+    {{movie.title}}
+    <input type="checkbox" id="watchlist">
+    <label for="watchlist">Add to Watchlist</label>
+</div>

@@ -25,9 +25,9 @@ export class MovieAPIService {
   getTopFive() {
     let url = "https://api.themoviedb.org/3/discover/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
     this.http.get(url).subscribe(
-      (resp:any) => { 
-      console.log("Apple");    
+      (resp:any) => {    
       this.movies = resp.results
+      this.movies = this.movies.slice(0, 5);
     },
     (error) => {
       console.log(error);
