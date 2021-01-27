@@ -1,3 +1,7 @@
-<!-- <h1>{{post.title}}</h1>
-<div class="image"><img src ={{post.image}}></div>
-{{post.link}} -->
+<h1>Search Results</h1>
+<div *ngFor="let movie of movieApi.movies">
+    <img src={{movie.poster_path}}>
+        {{movie.title}}
+        <input type="checkbox" id="watchlist">
+        <label for="watchlist">Add to Watchlist</label>
+    </div>
