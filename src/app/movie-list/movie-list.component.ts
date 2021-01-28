@@ -8,7 +8,7 @@ import { MovieAPIService } from '../movie-api.service';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor(public movieAPI:MovieAPIService) { }
+  constructor(public movieApi:MovieAPIService) { }
 
   ngOnInit(): void {
 //   this.movieAPI.getMovies();

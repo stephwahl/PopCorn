@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
-interface Response {
+/*interface Response {
   results: MoviePost[];
   page: number;
 }
+*/
 
 interface MoviePost {
   title: string;
@@ -32,8 +33,7 @@ export class MovieAPIService {
   apiKey = "110c1c3ee92dd118bc4a96828993158a";
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: MoviePost[];
-  
-  //movies: MoviePost[] = [];
+  favorites: MoviePost[] = [];
   
   constructor(private http: HttpClient) { }
 
