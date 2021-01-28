@@ -8,10 +8,13 @@ import { MovieAPIService } from '../movie-api.service';
 })
 export class SearchCriteriaComponent implements OnInit {
   constructor(public movieApi: MovieAPIService) { }
-
+  public selected: any;
+  
   ngOnInit(): void {
-    console.log("Hi there");
     this.movieApi.getTopFive();
   }
+  selectedMovie(movie) {
+    this.selected = movie;
 
+  }
 }
