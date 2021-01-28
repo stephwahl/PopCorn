@@ -14,4 +14,10 @@ export class SearchCriteriaComponent implements OnInit {
     this.movieApi.getTopFive();
   }
 
+  onClickSubmit(data) {
+    console.log("Year entered: " + data.year);
+    console.log("Genre entered: " + data.genres);
+    console.log("Rating entered: " + data.rating);
+  }
+
 }
