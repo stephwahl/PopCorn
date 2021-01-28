@@ -34,4 +34,10 @@ export class SearchCriteriaComponent implements OnInit {
   selectedMovie(movie: MoviePost) {
     this.selected = movie;
   }
+  favorite(movie: MoviePost) {
+    console.log(movie);
+    this.movieApi.favorites.push(movie);
+    console.log(this.movieApi.favorites);
+  }
+
 }

@@ -1,10 +1,11 @@
 <h1>My Watchlist</h1>
+
 <div *ngIf="movieApi.favorites">
-<div *ngFor="let movie of movieApi.favorites">
-<p>{{movie.title}}</p>
-<img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path">
-<p>{{movie.overview}}</p>
-<input type="checkbox" id="watchlist">
-<label for="watchlist">Add to Watchlist</label>
-</div>
+  <div *ngFor="let movie of movieApi.favorites">
+    <p>{{ movie.title }}</p>
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
+    <p>{{ movie.overview }}</p>
+    <input type="checkbox" id="watchlist" />
+    <label for="remove">Remove from Watchlist</label>
+  </div>
 </div>

@@ -1,7 +1,10 @@
 <h1>Search Results</h1>
-<div *ngFor="let movie of movieApi.movies">
-    <img src={{movie.poster_path}}>
-        {{movie.title}}
-        <input type="checkbox" id="watchlist">
-        <label for="watchlist">Add to Watchlist</label>
-    </div>
+<!-- <div *ngIf="movieApi.favorites">
+<div *ngFor="let movie of movieApi.favorites">
+<p>{{movie.title}}</p>
+<img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path">
+<p>{{movie.overview}}</p>
+<input type="checkbox" id="watchlist">
+<label for="watchlist">Add to Watchlist</label>
+</div>
+</div> --> -->

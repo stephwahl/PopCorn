@@ -1,7 +1,7 @@
 <div *ngIf="movie">
 <h1>Movie Details</h1>
 <p>{{movie.title}}</p>
-<input type="checkbox" id="watchlist">
+<input (click)="favorite(movie)" type="checkbox" id="watchlist" />
 <label for="watchlist">Add to Watchlist</label>
 <p>{{movie.genre_ids}}</p>
 <p>{{movie.overview}}</p>

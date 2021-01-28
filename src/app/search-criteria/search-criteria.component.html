@@ -1,5 +1,5 @@
 <form>
-    <select name="genres" id="genres">
+  <select name="genres" id="genres">
     <option value="" disabled selected hidden>Select Genre</option>
     <option value="28">Action</option>
     <option value="35">Comedy</option>
@@ -8,18 +8,23 @@
     <option value="27">Horror</option>
     <option value="9648">Mystery</option>
     <option value="10749">Romance</option>
-</select>
-<input type="text" placeholder="Input Year">
-<input type="text" placeholder="Input Title">
-<input type="submit" value="Search">
+  </select>
+  <input type="text" placeholder="Input Year" />
+  <input type="text" placeholder="Input Title" />
+  <input type="submit" value="Search" />
 </form>
+
 <h1>Spotlight Movies</h1>
 <div *ngFor="let movie of movieApi.movies">
-<img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path">
-    {{movie.title}}
-    <input (click)="favorite(movie)" type="checkbox" id="watchlist">
-    <label for="watchlist">Add to Watchlist</label>
-    <button (click)="selectedMovie(movie)" type="button">See Details</button>
+  <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
+  {{ movie.title }}
+  <input (click)="favorite(movie)" type="checkbox" id="watchlist" />
+  <label for="watchlist">Add to Watchlist</label>
+  <button (click)="selectedMovie(movie)" type="button">See Details</button>
 </div>
+
 <app-movie-detail [movie]="selected"></app-movie-detail>
+
 <app-watchlist-page></app-watchlist-page>
+
+<app-movie-list></app-movie-list>
