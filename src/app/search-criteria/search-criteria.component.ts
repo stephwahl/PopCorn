@@ -15,12 +15,5 @@ export class SearchCriteriaComponent implements OnInit {
   }
   selectedMovie(movie) {
     this.selected = movie;
-
-  // onClickSubmit(data) {
-  //   console.log("Year entered: " + data.year);
-  //   console.log("Genre entered: " + data.genres);
-  //   console.log("Rating entered: " + data.rating);
-  // }
-
   }
 }
