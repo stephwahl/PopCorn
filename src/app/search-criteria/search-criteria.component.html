@@ -28,8 +28,10 @@
 
 <h1>Spotlight Movies</h1>
 <div *ngFor="let movie of movieApi.movies">
-<img src={{movie.poster_path}}>
+<img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path">
     {{movie.title}}
     <input type="checkbox" id="watchlist">
     <label for="watchlist">Add to Watchlist</label>
+    <button (click)="selectedMovie(movie)" type="button">See Details</button>
 </div>
+<app-movie-detail [movie]="selected"></app-movie-detail>

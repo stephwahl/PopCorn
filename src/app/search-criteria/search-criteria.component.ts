@@ -8,16 +8,19 @@ import { MovieAPIService } from '../movie-api.service';
 })
 export class SearchCriteriaComponent implements OnInit {
   constructor(public movieApi: MovieAPIService) { }
-
+  public selected: any;
+  
   ngOnInit(): void {
-    console.log("Hi there");
     this.movieApi.getTopFive();
   }
+  selectedMovie(movie) {
+    this.selected = movie;
 
-  onClickSubmit(data) {
-    console.log("Year entered: " + data.year);
-    console.log("Genre entered: " + data.genres);
-    console.log("Rating entered: " + data.rating);
+  // onClickSubmit(data) {
+  //   console.log("Year entered: " + data.year);
+  //   console.log("Genre entered: " + data.genres);
+  //   console.log("Rating entered: " + data.rating);
+  // }
+
   }
-
 }
