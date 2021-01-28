@@ -7,11 +7,11 @@ import { MovieAPIService } from '../movie-api.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-
   constructor(public movieAPI:MovieAPIService) { }
 
   ngOnInit(): void {
-//   this.movieAPI.getMovies();
+    console.log("This is Search Results");
+    this.movieAPI.getMovies();
   }
 
 }

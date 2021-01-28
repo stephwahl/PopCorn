@@ -1,5 +1,6 @@
-<form>
-    <select name="genres" id="genres">
+<form #search = "ngForm" (ngSubmit) = "onClickSubmit(search.value)">
+
+<select name="genres" id="genres" ngModel>
     <option value="" disabled selected hidden>Select Genre</option>
     <option value="28">Action</option>
     <option value="35">Comedy</option>
@@ -9,16 +10,22 @@
     <option value="9648">Mystery</option>
     <option value="10749">Romance</option>
 </select>
-<input type="text" placeholder="Input Year">
-    <select name="rating" id="rating">
+
+<input type="text" name="year" placeholder="Input Year" ngModel>
+
+<select name="rating" id="rating">
     <option value="" disabled selected hidden>Select Rating</option>
     <option value="G">G</option>
     <option value="PG">PG</option>
     <option value="PG13">PG-13</option>
     <option value="R">R</option>
 </select>
+
 <input type="submit" value="Search">
 </form>
+
+<!-- <app-watchlist [favorites]="MovieAPIService.favorites"></app-watchlist> -->
+
 <h1>Spotlight Movies</h1>
 <div *ngFor="let movie of movieApi.movies">
 <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path">
