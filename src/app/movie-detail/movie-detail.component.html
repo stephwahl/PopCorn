@@ -8,10 +8,10 @@
     />
   </div>
   <p>{{ movie.title }}</p>
-  <input (click)="favorite(movie)" type="checkbox" id="watchlist" />
+  <input (click)="movieApi.favorite(movie)" type="checkbox" id="watchlist" />
   <label for="watchlist">Add to Watchlist</label>
   <p>Genre: {{ movie.genre_ids }}</p>
   <p>Overview: {{ movie.overview }}</p>
   <p>Vote avg: {{ movie.vote_average }}</p>
-  <p>Year: {{ movie.year }}</p>
+  <!-- <p>Year: {{ movie.year }}</p> -->
 </div>

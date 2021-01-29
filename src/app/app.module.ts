@@ -10,6 +10,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     SearchCriteriaComponent,
     MovieListComponent,
     WatchlistPageComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
