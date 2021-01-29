@@ -1,5 +1,7 @@
+<h1>Welcome to PopCorn!</h1>
+
 <form>
-  <select name="genres" id="genres">
+  <!-- <select name="genres" id="genres">
     <option value="" disabled selected hidden>Select Genre</option>
     <option value="28">Action</option>
     <option value="35">Comedy</option>
@@ -8,15 +10,21 @@
     <option value="27">Horror</option>
     <option value="9648">Mystery</option>
     <option value="10749">Romance</option>
-  </select>
-  <input type="text" placeholder="Input Year" />
-  <input type="text" placeholder="Input Title" />
-  <input type="submit" value="Search" />
+  </select> -->
+
+  <input type="text" [(ngModel)]="title" name="title" placeholder="Input Title" />
+
+  <input type="text" [(ngModel)]="year" name="year" placeholder="Input Year" />
+  
+  <input type="text" [(ngModel)]="rating" name="rating" placeholder="Input Rating" />
+  
+  <button (click)="movieApi.getMovies(year, title, rating)" type="button">Search</button>
+  
 </form>
 
 <h1>Spotlight Movies</h1>
 <div *ngFor="let movie of movieApi.movies">
-  <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" />
+  <div><img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/></div>
   {{ movie.title }}
   <input (click)="favorite(movie)" type="checkbox" id="watchlist" />
   <label for="watchlist">Add to Watchlist</label>

@@ -34,15 +34,31 @@ export class MovieAPIService {
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: MoviePost[];
   favorites: MoviePost[] = [];
+  search: MoviePost[] = [];
+  // title: MoviePost[] = []; 
   
   constructor(private http: HttpClient) { }
 
-  getMovies(year?: number) {
-    let url = "https://api.themoviedb.org/3/discover/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+  getMovies(year?: number, title?: string, rating?: number) {
+    // let url = "https://api.themoviedb.org/3/discover/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+    let url = "https://api.themoviedb.org/3/search/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&page=1&include_adult=false"
+    
     if (year) {
-    url += `&year=${year}`
+    url += `&year=${year}`}
+
+    if(title) {
+      url += `&query=${title}`}
+
+    if(rating) {
+      url += `&vote_average.gte=${rating}`}
+        
+    this.http.get(url).subscribe(
+      (resp:any) => {
+        this.search = resp.results
+      }
+    )
     }
-  }
+
   getTopFive() {
     let url = "https://api.themoviedb.org/3/discover/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
     this.http.get(url).subscribe(

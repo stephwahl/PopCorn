@@ -1,10 +1,17 @@
 <div *ngIf="movie">
-<h1>Movie Details</h1>
-<p>{{movie.title}}</p>
-<input (click)="favorite(movie)" type="checkbox" id="watchlist" />
-<label for="watchlist">Add to Watchlist</label>
-<p>{{movie.genre_ids}}</p>
-<p>{{movie.overview}}</p>
-<p>{{movie.vote_average}}</p>
-<p>{{movie.year}}</p>
+  <h1>Movie Details</h1>
+  <div>
+    <img
+      [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+      height="5%"
+      width="5%"
+    />
+  </div>
+  <p>{{ movie.title }}</p>
+  <input (click)="favorite(movie)" type="checkbox" id="watchlist" />
+  <label for="watchlist">Add to Watchlist</label>
+  <p>Genre: {{ movie.genre_ids }}</p>
+  <p>Overview: {{ movie.overview }}</p>
+  <p>Vote avg: {{ movie.vote_average }}</p>
+  <p>Year: {{ movie.year }}</p>
 </div>

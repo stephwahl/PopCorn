@@ -27,6 +27,10 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(public movieApi: MovieAPIService) { }
   public selected: any;
   public favorites: any;
+  public movies: any;
+  public year: number;
+  public title: string;
+  public rating: number;
 
   ngOnInit(): void {
     this.movieApi.getTopFive();
@@ -35,9 +39,13 @@ export class SearchCriteriaComponent implements OnInit {
     this.selected = movie;
   }
   favorite(movie: MoviePost) {
-    console.log(movie);
+    // console.log(movie);
     this.movieApi.favorites.push(movie);
-    console.log(this.movieApi.favorites);
+    // console.log(this.movieApi.favorites);
   }
+
+  // getSearchResults() {
+  //   this.movieApi.getSearchResults(this.year);
+  // }
 
 }
