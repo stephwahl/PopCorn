@@ -5,7 +5,8 @@
     <p>{{ movie.title }}</p>
     <div><img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/></div>
     <p>{{ movie.overview }}</p>
-    <input type="checkbox" id="watchlist" />
+    <!-- <input type="checkbox" id="watchlist" /> -->
     <label for="remove">Remove from Watchlist</label>
+    <input (click)="movieApi.removeFavorite(movie)" type="checkbox" />
   </div>
 </div>

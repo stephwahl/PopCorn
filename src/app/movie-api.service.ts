@@ -23,6 +23,11 @@ export class MovieAPIService {
   favorite(movie: MoviePost) {
     this.favorites.push(movie);
   }
+  
+  removeFavorite(movie: MoviePost) {
+    let findIndex = this.favorites.findIndex(m => m.title === movie.title);
+    this.favorites.splice(findIndex, 1);
+  }
 
   getMovies(year?: number, title?: string, rating?: number) {
     // let url = "https://api.themoviedb.org/3/discover/movie?api_key=110c1c3ee92dd118bc4a96828993158a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
