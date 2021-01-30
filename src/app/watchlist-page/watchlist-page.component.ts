@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieAPIService} from '../movie-api.service';
+
 @Component({
   selector: 'app-watchlist-page',
   templateUrl: './watchlist-page.component.html',

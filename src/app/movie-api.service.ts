@@ -3,44 +3,22 @@ import { HttpClient } from '@angular/common/http';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { MoviePost } from './movie-post';
 
-/*interface Response {
-  results: MoviePost[];
-  page: number;
-}
-*/
-// interface MoviePost {
-//   title: string;
-//   tagline: string;
-//   poster_path: string;
-//   overview: string;
-//   release_date: string;
-//   genre_ids: number[];
-//   id: number;
-//   original_title: string;
-//   original_language: string;
-//   backdrop_path: string;
-//   popularity: number;
-//   vote_count: number;
-//   video: boolean;
-//   vote_average: number;
-// }
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class MovieAPIService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   apiKey = "110c1c3ee92dd118bc4a96828993158a";
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: MoviePost[];
   favorites: MoviePost[] = [];
   search: MoviePost[] = [];
   public selected: any;
-  
+    
   selectedMovie(movie: MoviePost) {
     this.selected = movie;
-  }
+    }
 
   favorite(movie: MoviePost) {
     this.favorites.push(movie);

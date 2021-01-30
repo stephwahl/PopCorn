@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MovieAPIService } from '../movie-api.service';
-import { MoviePost } from '../movie-post';
+// import { MoviePost } from '../movie-post';
 
 @Component({
   selector: 'app-search-criteria',

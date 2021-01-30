@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MovieAPIService } from '../movie-api.service';
-import { MoviePost } from '../movie-post';
 
 @Component({
   selector: 'app-movie-detail',
@@ -13,7 +12,7 @@ export class MovieDetailComponent implements OnInit {
   @Input() movie;
   
   ngOnInit(): void {
-    this.movieApi.getMovies();
+    // this.movieApi.selectedMovie;
   }
 
 }

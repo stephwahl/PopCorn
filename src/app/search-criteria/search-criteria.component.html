@@ -1,38 +1,24 @@
 <h1>Welcome to PopCorn!</h1>
 
 <form>
-  <!-- <select name="genres" id="genres">
-    <option value="" disabled selected hidden>Select Genre</option>
-    <option value="28">Action</option>
-    <option value="35">Comedy</option>
-    <option value="18">Drama</option>
-    <option value="14">Fantasy</option>
-    <option value="27">Horror</option>
-    <option value="9648">Mystery</option>
-    <option value="10749">Romance</option>
-  </select> -->
-
   <input type="text" [(ngModel)]="title" name="title" placeholder="Input Title" />
-
   <input type="text" [(ngModel)]="year" name="year" placeholder="Input Year" />
-  
   <input type="text" [(ngModel)]="rating" name="rating" placeholder="Input Rating" />
-  
-  <button (click)="movieApi.getMovies(year, title, rating)" type="button">Search</button>
-  
+  <button (click)="movieApi.getMovies(year, title, rating)" type="button" [routerLink]="['/movie-list']">Search</button>
 </form>
 
 <h1>Spotlight Movies</h1>
 <div *ngFor="let movie of movieApi.movies">
-  <div><img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/></div>
-  {{ movie.title }}
+  <p>{{ movie.title }}</p>
+  <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/>
   <input (click)="movieApi.favorite(movie)" type="checkbox" id="watchlist" />
   <label for="watchlist">Add to Watchlist</label>
   <button (click)="movieApi.selectedMovie(movie)" type="button">See Details</button>
+  
 </div>
 
 <app-movie-detail [movie]="movieApi.selected"></app-movie-detail>
 
-<app-watchlist-page></app-watchlist-page>
+<!-- <app-watchlist-page></app-watchlist-page> -->
 
-<app-movie-list></app-movie-list>
+<!-- <app-movie-list></app-movie-list> -->
