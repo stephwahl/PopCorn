@@ -37,6 +37,7 @@ export class MovieAPIService {
     if(rating) {
       url += `&vote_average.gte=${rating}`}
         
+      console.log(url);
     this.http.get(url).subscribe(
       (resp:any) => {
         this.search = resp.results

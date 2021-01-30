@@ -3,7 +3,7 @@
 <form>
   <input type="text" [(ngModel)]="title" name="title" placeholder="Input Title" />
   <input type="text" [(ngModel)]="year" name="year" placeholder="Input Year" />
-  <input type="text" [(ngModel)]="rating" name="rating" placeholder="Input Rating" />
+  <input type="number" [(ngModel)]="rating" name="rating" placeholder="Input Rating" />
   <button (click)="movieApi.getMovies(year, title, rating)" type="button" [routerLink]="['/movie-list']">Search</button>
 </form>
 
