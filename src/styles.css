@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    /* background-image: url(../src/app/img/brrrrr); */
+    font-family: fantasy;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url(../src/app/img/mmmmmmm.jpg); */
+    background-image: radial-gradient(circle, darkred 0%, darkred 10%, rgb(34, 26, 26) 100%);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    min-width: 25vw;
+    min-height: 25vw;
+    padding: 1rem;
+}

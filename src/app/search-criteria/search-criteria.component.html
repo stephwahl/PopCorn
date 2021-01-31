@@ -1,3 +1,4 @@
+<body>
 <h1>Welcome to PopCorn!</h1>
 
 <form>
@@ -7,18 +8,20 @@
   <button (click)="movieApi.getMovies(year, title, rating)" type="button" [routerLink]="['/movie-list']">Search</button>
 </form>
 
-<h1>Spotlight Movies</h1>
-<div *ngFor="let movie of movieApi.movies">
+<h2>Spotlight Movies</h2>
+
+<div class="card_container">
+  <div class= "card" *ngFor="let movie of movieApi.movies">
   <p>{{ movie.title }}</p>
-  <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/>
+  <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="movie_poster" />
   <input (click)="movieApi.favorite(movie)" type="checkbox" id="watchlist" />
   <label for="watchlist">Add to Watchlist</label>
   <button (click)="movieApi.selectedMovie(movie)" type="button">See Details</button>
-  
+</div>
 </div>
 
 <app-movie-detail [movie]="movieApi.selected"></app-movie-detail>
-
+</body>
 <!-- <app-watchlist-page></app-watchlist-page> -->
 
 <!-- <app-movie-list></app-movie-list> -->

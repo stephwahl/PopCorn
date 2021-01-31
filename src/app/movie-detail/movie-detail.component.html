@@ -1,8 +1,8 @@
-<div *ngIf="movie">
+<div class="container" *ngIf="movie">
   <h1>Movie Details</h1>
 
     <p>{{ movie.title }}</p>
-    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%" />
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="10%" width="10%" />
     <p>Overview: {{ movie.overview }}</p>
     <p>Genre: {{ movie.genre_ids }}</p>
     <p>Vote avg: {{ movie.vote_average }}</p>

@@ -1,9 +1,9 @@
 <h1>My Watchlist</h1>
 
-<div *ngIf="movieApi.favorites">
+<div class="container" *ngIf="movieApi.favorites">
   <div *ngFor="let movie of movieApi.favorites">
     <p>{{ movie.title }}</p>
-    <div><img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="5%" width="5%"/></div>
+    <div><img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" height="10%" width="10%"/></div>
     <p>{{ movie.overview }}</p>
     <!-- <input type="checkbox" id="watchlist" /> -->
     <label for="remove">Remove from Watchlist</label>

@@ -1,0 +1,93 @@
+h1 {
+color: white;
+text-align: center;
+font-weight: lighter; 
+width: auto;
+height: auto;
+}
+
+form {
+    padding: 20px 20px 45px 20px;
+}
+
+input {
+	margin-left: 100px;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+
+button {
+    margin-left: 100px;
+    padding: 5px 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    /* background-image: url(../img/cute.jpg); */
+    background-color: white;
+    color: black;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+button:hover {
+    /* background-color: white; */
+    background-image: url(../img/cute.jpg);
+
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-weight: lighter; 
+}
+
+/* movies detail */
+
+.card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+
+}
+
+.movie_poster {
+    display: flex;
+    max-width: 20vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    color: white;
+    margin: auto;
+
+}
+
+label {
+    color: white;
+}
+
+
+/* smaller screen */
+@media screen and (max-height: 750px) {
+   
+}

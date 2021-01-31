@@ -1,5 +1,59 @@
-ul {
+.container {
+  margin: 8px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: auto;
+  /* background-color: black; */
+  background-image: url(../img/cute.jpg);
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  /* background-image: url(../img/popcorn-paper-cup-black-background_188556-1512.jpg); */
+  /* background-color:rgb(77, 61, 61); */
+  background-image: linear-gradient(45deg, rgb(88, 2, 2), rgb(77, 61, 61), black);
+}
+
+
+/* .popcorn-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px; */
+  /* orrrr */
+  /* display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    if you want it vertically middle of the navbar. */
+/* }
+
+  ul {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    width: auto;
   }
+  li {
+    list-style-type: none;
+    padding-bottom: 15px;
+    width: 10vw;
+    margin: 10px;
+  } */
+
